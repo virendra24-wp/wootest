@@ -90,7 +90,7 @@ function virendra_add_coupon_specific_email( $order, $sent_to_admin, $plain_text
 	      $product = wc_get_product( $product_id );
 
 	      $is_virtual = $product->is_virtual();
-	      if($is_virtual == 1) { echo "herer";
+	      if($is_virtual == 1) { 
 	      	$chk_virtual = true;
 	      }
 	      
@@ -126,10 +126,8 @@ function virendra_add_coupon_specific_email( $order, $sent_to_admin, $plain_text
 			update_post_meta( $new_coupon_id, 'apply_before_tax', 'yes' );
 			update_post_meta( $new_coupon_id, 'free_shipping', 'no' );
 
-	   		echo '<h2 class="email-upsell-title">Discount Code for Next Purchase</h2><p class="email-upsell-p"><strong>Note:</strong> This discount code you can use for the next purchase but only one time usable</p><p><strong>Discount Code:</strong>"'.$random_string.'"</p>';  die;
-	   }
-
-      
+	   		echo '<h2 class="email-upsell-title">Discount Code for Next Purchase</h2><p class="email-upsell-p"><strong>Note:</strong> This discount code you can use for the next purchase but only one time usable</p><p><strong>Discount Code:</strong>"'.$random_string.'"</p>';  
+	   }      
 
    }
 }
